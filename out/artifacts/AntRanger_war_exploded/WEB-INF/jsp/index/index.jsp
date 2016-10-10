@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ANT_RANGER</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="/ui/css/normalize.css">
+        <link rel="stylesheet" href="/ui/css/font-awesome.css">
+        <link rel="stylesheet" href="/ui/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/ui/css/templatemo-style.css">
+        <script src="/ui/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!-- SIDEBAR -->
+        <div class="sidebar-menu hidden-xs hidden-sm">
+            <div class="top-section">
+                <div class="profile-image">
+                    <img src="/ui/img/profile.jpg" alt="Volton">
+                </div>
+                <h3 class="profile-title">AntRanger</h3>
+                <p class="profile-description">Java Engineer</p>
+            </div> <!-- top-section -->
+            <div class="main-navigation">
+                <ul class="navigation">
+                    <li><a href="#top"><i class="fa fa-globe"></i>Welcome</a></li>
+                    <li><a href="#about"><i class="fa fa-pencil"></i>About Me</a></li>
+                    <li><a href="#projects"><i class="fa fa-paperclip"></i>My Gallery</a></li>
+                    <li><a href="#contact"><i class="fa fa-link"></i>Contact Me</a></li>
+                </ul>
+            </div> <!-- .main-navigation -->
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+            </div> <!-- .social-icons -->
+        </div> <!-- .sidebar-menu -->
+
+        <div class="banner-bg" id="top">
+            <div class="banner-overlay"></div>
+            <div class="welcome-text">
+                <h2>Simple Engineer | Personal Blog</h2>
+                <h5>This is a mobile friendly layout with Bootstrap v3.3.1 framework. Maecenas eu ante at nunc posuere fringilla sit amet non dolor. Proin condimentum fermentum nunc.</h5>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="fluid-container">
+
+                <div class="content-wrapper">
+                
+                    <!-- ABOUT -->
+                    <div class="page-section" id="about">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Learn About Me</h4>
+                            <div class="about-image">
+                                <img src="/ui/img/8.jpg" alt="about me">
+                            </div>
+                            <p>Volton is free <a rel="nofollow" href="http://www.templatemo.com/page/1">responsive mobile template</a> from <span class="blue">template</span><span class="green">mo</span> website. You can use this template for any purpose. Please tell your friends about it. Thank you. Credit goes to <a rel="nofollow" href="#">Unsplash</a> for images used in this design. You can <strong>change menu icons</strong> by checking <a rel="nofollow" href="#/font-awesome-icon-world-map/">Font Awesome</a> (version 4). Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong></p>
+                            <hr>
+                        </div>
+                    </div> <!-- #about -->
+                    </div>
+                    
+                    <!-- PROJECTS -->
+                    <div class="page-section" id="projects">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">PHOTOS OF WHAT I DO</h4>
+                            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
+                        </div>
+                    </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="/ui/img/1.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="/ui/img/2.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="/ui/img/3.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="/ui/img/4.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <p>Quisque mattis sit amet dolor eu scelerisque. Vivamus bibendum massa et nisl tempus commodo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="/ui/img/5.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <p>Quisque mattis sit amet dolor eu scelerisque. Vivamus bibendum massa et nisl tempus commodo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="/ui/img/6.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <p>Quisque mattis sit amet dolor eu scelerisque. Vivamus bibendum massa et nisl tempus commodo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .projects-holder -->
+                    </div>
+                    <hr>
+
+                    <!-- CONTACT -->
+                    <div class="page-section" id="contact">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">PLACE TO TALK WITH ME</h4>
+                            <p>Vestibulum ac iaculis erat, in semper dolor. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form method="post" class="contact-form">
+                            <fieldset class="col-md-4 col-sm-6">
+                                <input type="text" id="your-name" placeholder="Your Name..." name="visitorData.name">
+                            </fieldset>
+                            <fieldset class="col-md-4 col-sm-6">
+                                <input type="email" id="email" placeholder="Your Email..." name="visitorData.email">
+                            </fieldset>
+                            <fieldset class="col-md-4 col-sm-12">
+                                <input type="text" id="your-subject" placeholder="Subject...">
+                            </fieldset>
+                            <fieldset class="col-md-12 col-sm-12">
+                                <textarea id="message" cols="30" rows="6" placeholder="Leave your message..." name="common"></textarea>
+                            </fieldset>
+                            <fieldset class="col-md-12 col-sm-12">
+                                <input type="button" class="button big default" value="Send Message">
+                            </fieldset>
+                        </form>
+                    </div> <!-- .contact-form -->
+                    </div>
+                    <hr>
+
+                    <div class="row" id="footer">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright-text">Copyright &copy; 2084 Company Name | More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="/ui/js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="/ui/js/min/plugins.min.js"></script>
+        <script src="/ui/js/min/main.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+               $('.button').on('click',function(){
+                   var url = "/ajax/message/saveMessage";
+                   var param = $('.contact-form').serialize();
+                   $.ajax({
+                       type:"POST",
+                       url:url,
+                       data:param,
+                       success:function(data){
+                           alert(data);
+                       },
+                       error:function(e) {
+                           console.log(e);
+                       }
+                   });
+               });
+            });
+        </script>
+    </body>
+</html>

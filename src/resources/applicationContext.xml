@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!--  配置数据库连接 -->
+    <context:property-placeholder location="classpath:config/jdbc.properties"/>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="com.ant.ranger.*"/>
+        <property name="annotatedPackages">
+            <list>
+                <value>com.ant.ranger</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.ant.ranger.util.CustomMysqlDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.jdbc.fetch_size">50</prop>
+                <prop key="hibernate.jdbc.batch_size">25</prop>
+                <prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+
+
+    <!--<aop:config>-->
+        <!--<aop:pointcut expression="execution(com.ant.ranger.service.impl.*.*(..))" id="pointcut"/>-->
+        <!--<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>-->
+    <!--</aop:config>-->
+
+
+    <!-- 包扫描 -->
+    <context:component-scan base-package="com.ant.ranger"/>
+
+
+    <bean id="baseGenerateNoStrategies" class="com.ant.ranger.service.generate.ARBaseGenerateNoStrategies">
+        <constructor-arg name="length" value="9"/>
+        <constructor-arg name="template" value="C$"/>
+    </bean>
+
+
+    <!-- conventer and populator-->
+    <bean id="userReversePopulator" class="com.ant.ranger.mapping.populator.user.UserReversePopulator"/>
+    <bean id="userReverseConventer" class="com.ant.ranger.mapping.conventer.user.UserReverseConventer">
+        <property name="populators">
+            <list>
+                <ref bean="userReversePopulator"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="visitorReversePopulator" class="com.ant.ranger.mapping.populator.user.VisitorReversePopulator" parent="userReversePopulator"/>
+    <bean id="visitorReverseConventer" class="com.ant.ranger.mapping.conventer.user.VisitorReverseConventer" parent="userReverseConventer">
+        <property name="populators">
+            <list>
+                <ref bean="visitorReversePopulator"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="userPopulator" class="com.ant.ranger.mapping.populator.user.UserPopulator"/>
+    <bean id="userConventer" class="com.ant.ranger.mapping.conventer.user.UserConventer">
+        <property name="populators">
+            <list>
+                <ref bean="userPopulator"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="visitorPopulator" class="com.ant.ranger.mapping.populator.user.VisitorPopulator" parent="userPopulator"/>
+    <bean id="visitorConventer" class="com.ant.ranger.mapping.conventer.user.VisitorConventer" parent="userConventer">
+        <property name="populators">
+            <list>
+                <ref bean="visitorPopulator"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="messagePopulator" class="com.ant.ranger.mapping.populator.message.MessagePopulator"/>
+    <bean id="messageConverter" class="com.ant.ranger.mapping.conventer.message.MessageConverter">
+        <property name="populators">
+            <list>
+                <ref bean="messagePopulator"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="messageReversePopulator" class="com.ant.ranger.mapping.populator.message.MessageReversePopulator"/>
+    <bean id="messageReverseConventer" class="com.ant.ranger.mapping.conventer.message.MessageReverseConventer">
+        <property name="populators">
+            <list>
+                <ref bean="messageReversePopulator"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="catalogPopulator" class="com.ant.ranger.mapping.populator.catalog.CatalogPopulator"/>
+    <bean id="catalogConventer" class="com.ant.ranger.mapping.conventer.catalog.CatalogConventer">
+        <property name="populators">
+            <list>
+                <ref bean="catalogPopulator"/>
+            </list>
+        </property>
+    </bean>
+</beans>
